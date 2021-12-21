@@ -67,12 +67,6 @@ body {
     left: 17px;
 }
 
-.front__text {
-    border-radius: 100px;
-    z-index: -1;
-    left: 96px;
-}
-
 .front__logo {
     right: 29px;
 }
