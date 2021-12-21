@@ -1,0 +1,115 @@
+body {
+    font-family: 'Lobster', cursive;
+}
+
+#back {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.main__inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 635px;
+    height: 449px;
+    position: relative;
+    border: none;
+    perspective: 1000px;
+    background-color: transparent;
+}
+
+.front, .back {
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 3s;
+    backface-visibility: hidden;
+    color: black;
+}
+
+.front {
+    z-index: -2;
+    background-image: url(../images/front_card.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.front__wreath, .front__text, .front__logo {
+    position: absolute;
+}
+
+.front__wreath {
+    z-index: 0;
+    left: 17px;
+}
+
+.front__text {
+    border-radius: 100px;
+    z-index: -1;
+    left: 96px;
+}
+
+.front__logo {
+    right: 29px;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-image: url(../images/back_card.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.back span{
+    color: #D00000;
+}
+
+.back__text-left, .back__text-right {
+    position: absolute;
+    height: 266px;
+    top: 162px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.back__text-left {
+    width: 258px;
+    left: 39px;
+}
+
+.back__text-right {
+    width: 236px;
+    right: 55px;
+}
+
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(360deg);
+}
